@@ -1,0 +1,35 @@
+{
+  "name": "Lottery",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "testrpc": "ganache-cli --gasLimit 13000000 -e 100000 --networkId 666",
+    "migrate": "truffle migrate --network testnet --reset",
+    "compile": "truffle compile --network testnet",
+    "test": "rm -rf contracts/flattened/*.sol && truffle test",
+    "flatten": "truffle-flattener contracts/FTSToken.sol > flatten-contracts/FTSToken.sol && truffle-flattener contracts/FTSReferral.sol > flatten-contracts/FTSReferral.sol && truffle-flattener contracts/FTSMasterChef.sol > flatten-contracts/FTSMasterChef.sol && truffle-flattener contracts/FTSLottery.sol > flatten-contracts/FTSLottery.sol && truffle-flattener contracts/Timelock.sol > flatten-contracts/Timelock.sol && truffle-flattener contracts/Multicall.sol > flatten-contracts/Multicall.sol && truffle-flattener contracts/SmartChef.sol > flatten-contracts/SmartChef.sol && node flatten_fix.js",    
+    "flatten-owner": "truffle-flattener contracts/FitswapFactory.sol > flatten-contracts/FitswapFactory.sol && truffle-flattener contracts/FitswapRouter.sol > flatten-contracts/FitswapRouter.sol && truffle-flattener contracts/FitswapProfile.sol > flatten-contracts/FitswapProfile.sol && truffle-flattener contracts/FitswapPair.sol > flatten-contracts/FitswapPair.sol && node flatten_fix.js"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^3.2.0",
+    "@openzeppelin/test-helpers": "^0.5.6",
+    "@saladswap/salad-swap-lib": "0.0.1",
+    "@uniswap/v2-core": "^1.0.1",
+    "@uniswap/v2-periphery": "^1.1.0-beta.0",
+    "truffle": "^5.1.41"
+  },
+  "devDependencies": {
+    "@nomiclabs/buidler": "^1.4.7",
+    "@nomiclabs/buidler-ethers": "^2.0.0",
+    "@nomiclabs/buidler-truffle5": "^1.3.4",
+    "@nomiclabs/buidler-waffle": "^2.0.0",
+    "@nomiclabs/buidler-web3": "^1.3.4",
+    "chai": "^4.2.0",
+    "ethereum-waffle": "^3.0.0",
+    "ethers": "^5.0.14",
+    "truffle-flattener": "^1.4.4",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "truffle-plugin-verify": "^0.5.0",
+    "web3": "^1.3.0"
+  }
+}
