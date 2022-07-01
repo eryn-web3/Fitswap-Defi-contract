@@ -8,7 +8,7 @@ BSC contract code : https://bscscan.com//address/0xb6E043914d34C07D3452562390189
 
 FTS Masterchef : 
 
-Address : 0x9c45aE652B069F798eC197Ea25B8D5Cb68165356
+Address : 0x693290d44f070AcbEd61f45693c0230871980a41
 
-BSC contract code : https://bscscan.com//address/0x9c45aE652B069F798eC197Ea25B8D5Cb68165356
+BSC contract code : https://bscscan.com//address/0x693290d44f070AcbEd61f45693c0230871980a41
 
